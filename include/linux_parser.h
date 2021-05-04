@@ -2,6 +2,7 @@
 #define SYSTEM_PARSER_H
 
 #include <fstream>
+#include <iostream>
 #include <regex>
 #include <string>
 
@@ -40,7 +41,17 @@ enum CPUStates {
   kGuest_,
   kGuestNice_
 };
+
+enum CPUTime{
+  kUtime_ = 14,
+  kStime_ = 15, 
+  kCutime_ = 16,
+  kCstime_ = 17,
+  kStarttime_ = 22
+};
+
 std::vector<std::string> CpuUtilization();
+float CpuUtilization(int pid);
 long Jiffies();
 long ActiveJiffies();
 long ActiveJiffies(int pid);
