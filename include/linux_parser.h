@@ -42,9 +42,10 @@ enum CPUStates {
   kGuestNice_
 };
 
-enum CPUTime{
+// CPU time
+enum CPUTime {
   kUtime_ = 14,
-  kStime_ = 15, 
+  kStime_ = 15,
   kCutime_ = 16,
   kCstime_ = 17,
   kStarttime_ = 22
